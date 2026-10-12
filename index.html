@@ -83,7 +83,7 @@
       <h1>RTSP Bridge Privacy Policy</h1>
       <p class="subtitle">Privacy information for RTSP Bridge, published by Tytus Borycki.</p>
       <div class="meta">
-        Effective date: September 23, 2026<br>
+        Last revised: October 12, 2026<br>
         Publisher: Tytus Borycki<br>
         Contact: <a href="mailto:tytusborycki@gmail.com">tytusborycki@gmail.com</a>
       </div>
@@ -106,19 +106,15 @@
 
     <section>
       <h2>3. Information the application may process</h2>
-      <p>Depending on how RTSP Bridge is used, the application may access or process:</p>
+      <p>Depending on how RTSP Bridge is used, the desktop application may access or process:</p>
       <ul>
-        <li>IP addresses or host names of network cameras,</li>
-        <li>RTSP URLs,</li>
-        <li>usernames and passwords required to connect to cameras,</li>
-        <li>technical camera information such as manufacturer, model, stream profiles, and supported video parameters,</li>
-        <li>live video received from RTSP streams,</li>
-        <li>names and configuration of saved devices,</li>
-        <li>application settings,</li>
-        <li>subscription and entitlement information provided by Microsoft Store,</li>
-        <li>usage information related to subscription limits, where applicable,</li>
-        <li>diagnostic information voluntarily provided by the user when reporting a problem.</li>
+        <li>IP addresses, host names, RTSP URLs, camera usernames and passwords required to connect to cameras,</li>
+        <li>technical camera information, stream profiles, live RTSP video, saved devices and application settings,</li>
+        <li>Microsoft Store subscription status and locally measured camera-stream usage,</li>
+        <li>diagnostic information that the user voluntarily sends for support.</li>
       </ul>
+      <p><strong>Optional Google/Firebase account features (RTSP Bridge 0.4.0 and later):</strong> when the user signs in using Google, the Firebase service processes a unique Firebase account ID (UID), email address, display name where available, most recent activity timestamp, Premium entitlement and expiry, and aggregate app usage duration (total and current calendar month). Administrative changes to Premium are recorded in an audit log with the affected UID, the administrator UID and the change timestamp.</p>
+      <p>Account-linked usage is measured from periodic requests while the signed-in desktop app is open; it is distinct from the local Basic-plan camera-stream usage counter. The account-linked data does not contain RTSP video, camera passwords, stream contents or camera addresses.</p>
     </section>
 
     <section>
@@ -146,20 +142,17 @@
     </section>
 
     <section>
-      <h2>7. Subscriptions and payments</h2>
-      <p>RTSP Bridge subscriptions are handled through <strong>Microsoft Store</strong>.</p>
-      <p>RTSP Bridge may receive information from Microsoft Store that is necessary to determine whether the user has an active subscription and which subscription tier is active.</p>
-      <p>The publisher does not receive the user’s payment card details or other payment credentials.</p>
-      <p>Payments, renewals, cancellations, billing, and subscription management are handled according to Microsoft Store policies.</p>
-      <p>Purchase-related information may be processed by Microsoft in accordance with Microsoft’s own privacy policy.</p>
+      <h2>7. Subscriptions, Premium entitlements and payments</h2>
+      <p>Microsoft Store subscriptions and purchases, where offered, are handled through <strong>Microsoft Store</strong>. RTSP Bridge receives the subscription entitlement information needed to determine which features and limits apply.</p>
+      <p>Users who choose to sign in with a Google account may also receive <strong>Premium access assigned by an RTSP Bridge administrator</strong>. Firebase stores the applicable entitlement status, validity period and a record of administrative changes. An administrator-assigned entitlement does not require a purchase through Microsoft Store.</p>
+      <p>The publisher does not receive payment-card details or other payment credentials. Microsoft manages Store purchases, billing, renewal and cancellation under its own policies.</p>
     </section>
 
     <section>
-      <h2>8. Basic plan usage counter</h2>
-      <p>If the Basic subscription includes a monthly camera usage limit, RTSP Bridge may store usage information in order to enforce that limit.</p>
-      <p>The usage counter applies to active virtual camera streaming and not simply to the amount of time the application remains open.</p>
-      <p>To help prevent abuse or circumvention of usage limits, usage information may be synchronized with a licensing system or service associated with the user’s subscription.</p>
-      <p>Such usage information does not include camera video, RTSP passwords, or the content of the video stream.</p>
+      <h2>8. Usage measurement and account-linked records</h2>
+      <p>The Basic plan may include limits on active virtual-camera streaming time. The local subscription usage counter measures camera-stream activity, not merely the time that the program is open.</p>
+      <p>Separately, when a user is signed in through Firebase, the application may send an authenticated activity heartbeat approximately every 30 seconds. The backend associates the resulting server-measured usage intervals with that user's Firebase UID. It stores the overall duration, the current-month duration and the date of the last heartbeat. These account-linked statistics reflect application activity and are not equivalent to the duration of RTSP video streaming.</p>
+      <p>Usage statistics are used to display account activity, administer service entitlements and help protect the service from misuse. Neither form of usage measurement requires the transmission of camera images, audio, RTSP passwords or stream contents.</p>
     </section>
 
     <section>
@@ -171,59 +164,40 @@
 
     <section>
       <h2>10. Purposes of processing</h2>
-      <p>Information processed by RTSP Bridge may be used to:</p>
-      <ul>
-        <li>connect the application to selected cameras,</li>
-        <li>receive and process RTSP video,</li>
-        <li>create virtual camera devices in Windows,</li>
-        <li>store user configuration,</li>
-        <li>automatically reconnect to cameras,</li>
-        <li>discover cameras on the local network,</li>
-        <li>verify subscription status,</li>
-        <li>enforce limits associated with the selected subscription plan,</li>
-        <li>resolve technical issues reported by users,</li>
-        <li>maintain security and reliable operation of the application.</li>
-      </ul>
+      <p>RTSP Bridge processes information to connect to selected cameras, display virtual cameras in Windows, preserve user configuration, discover devices on local networks and provide technical support.</p>
+      <p>When Firebase account features are used, additional processing supports Google sign-in, linking the desktop app to a Firebase UID, refreshing sessions, displaying Premium status, managing administrator-assigned entitlements, recording entitlement changes, displaying account usage statistics and protecting the service against unauthorized access.</p>
+      <p>Microsoft Store subscription information is processed to verify purchases and apply the applicable service limits.</p>
     </section>
 
     <section>
       <h2>11. Legal bases for processing</h2>
-      <p>Where the General Data Protection Regulation (GDPR) applies, personal data may be processed primarily:</p>
-      <ul>
-        <li>to perform a contract and provide the functionality of the application,</li>
-        <li>to comply with legal obligations,</li>
-        <li>on the basis of legitimate interests, including security, fraud prevention, abuse prevention, and technical support,</li>
-        <li>on the basis of user consent where consent is required for a specific type of processing.</li>
-      </ul>
+      <p>Where the General Data Protection Regulation (GDPR) applies, the legal basis depends on the specific purpose: performance of the app/service contract for authentication, entitlements and core functions; legitimate interests for service security, abuse prevention and responding to support requests; compliance with legal obligations where applicable; and consent where a particular processing activity legally requires it.</p>
+      <p>Google/Firebase sign-in is optional for local RTSP camera use, but is necessary to access account-linked Firebase features and administrator-assigned Premium.</p>
     </section>
 
     <section>
-      <h2>12. Sharing of information</h2>
-      <p>RTSP Bridge does not sell users’ personal information.</p>
-      <p>Information may be shared with third parties only where necessary to provide a specific function or where required by law.</p>
-      <p>This may include:</p>
+      <h2>12. Sharing of information and service providers</h2>
+      <p>The publisher does not sell users' personal information. Data is disclosed only as needed to operate relevant features or meet legal requirements.</p>
       <ul>
-        <li><strong>Microsoft</strong>, for Microsoft Store distribution, licensing, subscriptions, purchases, and payment processing,</li>
-        <li>technical service providers, if future versions of RTSP Bridge use infrastructure for licensing or usage-limit synchronization,</li>
-        <li>public authorities, where disclosure is required under applicable law.</li>
+        <li><strong>Microsoft</strong>: Microsoft Store distribution, subscriptions, licensing and payments, where applicable.</li>
+        <li><strong>Google / Firebase</strong>: Google sign-in and Firebase Authentication; Firebase Cloud Functions to validate sessions and entitlements; Cloud Firestore to store Firebase UID-linked profiles, entitlements, aggregated usage and administrative audit records; Firebase Hosting for account login and the administrative panel.</li>
+        <li>Public authorities where disclosure is required by applicable law.</li>
       </ul>
-      <p>If RTSP Bridge begins using additional external services in the future, this Privacy Policy will be updated accordingly.</p>
+      <p>The video and audio from RTSP cameras are not sent to the Firebase backend for these account and licensing functions. Google and Microsoft process service data under their respective privacy terms.</p>
     </section>
 
     <section>
-      <h2>13. Data retention</h2>
-      <p>Configuration data, saved camera profiles, and camera credentials are stored locally for as long as the user keeps the relevant configuration or application installed.</p>
-      <p>Users can remove saved devices from within RTSP Bridge.</p>
-      <p>Subscription-related data is retained according to Microsoft Store policies.</p>
-      <p>Information voluntarily provided in connection with technical support may be retained for as long as necessary to resolve the request, investigate recurring issues, defend against legal claims, or comply with legal obligations, and will be deleted when it is no longer needed.</p>
+      <h2>13. Data retention and account deletion requests</h2>
+      <p>Saved camera configurations, RTSP connection details and associated credentials remain locally on the device until changed or removed by the user or deleted with the application's local data.</p>
+      <p>When Firebase account features are used, Firebase UID-linked profile data, Premium entitlements, app-usage totals and audit events are held to operate the account, maintain service security and resolve disputes. An automatic fixed deletion period for these backend records is not currently specified. Users may request review or deletion of their account-related information by contacting <a href="mailto:tytusborycki@gmail.com">tytusborycki@gmail.com</a>. Some records may need to be retained longer when required by law or legitimate security needs.</p>
+      <p>One-time desktop sign-in sessions normally expire after a short validity period. Microsoft Store data and voluntarily provided support correspondence follow the relevant provider's terms and the time needed to address the request.</p>
     </section>
 
     <section>
       <h2>14. Security</h2>
-      <p>RTSP Bridge uses technical measures intended to reduce the risk of unauthorized access to stored information.</p>
-      <p>These measures include the use of security features provided by Windows and limiting the amount of information transferred outside the user’s device.</p>
-      <p>However, no information system can guarantee absolute security.</p>
-      <p>Users should use strong camera passwords, keep camera firmware up to date, and secure their local network appropriately.</p>
+      <p>RTSP Bridge uses security measures intended to reduce unauthorized access. Windows features are used to protect locally saved camera credentials. In the Firebase-enabled Windows app, the session refresh token is saved using Windows Data Protection API (DPAPI), scoped to the signed-in Windows user; the refresh token is not deliberately saved as plaintext.</p>
+      <p>Firebase API access requires a validated Firebase sign-in token, and administrator actions are restricted to authorized accounts. The backend stores account and usage information independently from camera-stream content.</p>
+      <p>However, no system guarantees absolute security. Users should secure their camera passwords, devices and local network and keep the software updated.</p>
     </section>
 
     <section>
@@ -252,8 +226,8 @@
 
     <section>
       <h2>17. International data transfers</h2>
-      <p>Some services associated with Microsoft Store may be provided by entities located outside the European Economic Area.</p>
-      <p>Where this occurs, such transfers are subject to the safeguards used by the relevant service provider and applicable international data transfer laws.</p>
+      <p>Microsoft and Google services may process relevant data using infrastructure and sub-processors located in different countries. Firebase Cloud Functions for RTSP Bridge are deployed in the <code>europe-central2</code> region (Warsaw, Poland), but this does not imply that every component of Google/Firebase or Microsoft service processing is limited to that region.</p>
+      <p>Where personal data is transferred outside the European Economic Area, applicable transfer safeguards and the providers' privacy terms apply.</p>
     </section>
 
     <section>
@@ -274,7 +248,7 @@
       <p>For questions concerning privacy, personal data, security, or the operation of RTSP Bridge, please contact:</p>
       <p><strong>Tytus Borycki</strong><br>
       Email: <a href="mailto:tytusborycki@gmail.com">tytusborycki@gmail.com</a></p>
-      <p>Last updated: September 23, 2026</p>
+      <p>Last updated: October 12, 2026</p>
     </section>
 
     <footer>
